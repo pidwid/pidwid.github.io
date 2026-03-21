@@ -19,6 +19,20 @@ const PROJECTS = [
     accent: '#7c5cfc',
   },
   {
+    title: 'EzPay — AI-Powered HR/Payroll Data Platform',
+    description:
+      'AI-driven platform that transforms CSVs into intelligent, queryable databases with zero manual configuration. Auto schema inference, primary key detection, pipeline automation, and audit logging for HR and payroll workflows.',
+    tags: ['Deno', 'React', 'TypeScript', 'AI', 'Turso', 'AWS S3', 'Pipelines'],
+    metrics: [
+      { value: '1,860+', label: 'rows validated' },
+      { value: '66', label: 'columns inferred' },
+      { value: '0-config', label: 'setup required' },
+    ],
+    links: { github: 'https://github.com/pidwid/EzPay', live: null },
+    accent: '#00d4ff',
+    note: 'Private repo',
+  },
+  {
     title: 'SaaS AI Platform — Convogenie',
     description:
       'Designed and deployed a scalable SaaS architecture on AWS integrating Claude Anthropic and Gemini LLMs to automate enterprise customer service, lead acquisition, and shopping experiences.',
@@ -28,7 +42,7 @@ const PROJECTS = [
       { value: '$35k+', label: 'initial revenue' },
     ],
     links: { github: null, live: null },
-    accent: '#00d4ff',
+    accent: '#7c5cfc',
     note: 'Private — stealth startup',
   },
   {
