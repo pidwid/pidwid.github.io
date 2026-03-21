@@ -36,7 +36,7 @@ export default function Nav() {
           ))}
           <a
             className="nav-cta"
-            href="mailto:luckyshukla765@gmail.com"
+            href="mailto:rishabhshukla@outlook.in"
           >
             Hire me
           </a>

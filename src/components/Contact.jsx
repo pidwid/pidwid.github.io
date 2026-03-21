@@ -17,7 +17,7 @@ export default function Contact() {
       <div className="contact-cards">
         <a
           className="contact-card"
-          href="mailto:luckyshukla765@gmail.com"
+          href="mailto:rishabhshukla@outlook.in"
         >
           <span className="contact-card-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -27,7 +27,7 @@ export default function Contact() {
           </span>
           <div>
             <p className="contact-card-label">Email</p>
-            <p className="contact-card-value">luckyshukla765@gmail.com</p>
+            <p className="contact-card-value">rishabhshukla@outlook.in</p>
           </div>
           <span className="contact-card-arrow">→</span>
         </a>

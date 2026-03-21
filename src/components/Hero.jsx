@@ -58,7 +58,7 @@ export default function Hero() {
               <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </button>
-          <a className="hero-btn hero-btn--ghost" href="mailto:luckyshukla765@gmail.com">
+          <a className="hero-btn hero-btn--ghost" href="mailto:rishabhshukla@outlook.in">
             Get in touch
           </a>
         </div>
