@@ -1,0 +1,128 @@
+.contact-section {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-glow {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(124,92,252,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-width: 280px;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  text-align: left;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.contact-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-card-label {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: var(--mono);
+  margin-bottom: 0.15rem;
+}
+
+.contact-card-value {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact-card-arrow {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-size: 1rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.contact-card:hover .contact-card-arrow {
+  color: var(--accent);
+  transform: translateX(3px);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.footer-gh {
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-gh:hover { color: var(--text); }
+
+@media (max-width: 560px) {
+  .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+  .contact-card { min-width: auto; width: 100%; }
+}

@@ -1,0 +1,121 @@
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.skill-group {
+  padding: 1.25rem 1.4rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  border-top: 2px solid var(--grp-color, var(--accent));
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.skill-group:hover {
+  border-color: var(--border-bright);
+  background: var(--bg-card-hover);
+}
+
+.skill-group-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.skill-group-icon { font-size: 1.1rem; }
+
+.skill-group-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--grp-color, var(--accent));
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-pill {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.25rem 0.65rem;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.skill-pill:hover {
+  color: var(--grp-color, var(--accent));
+  border-color: color-mix(in srgb, var(--grp-color, var(--accent)) 40%, transparent);
+  background: color-mix(in srgb, var(--grp-color, var(--accent)) 8%, transparent);
+}
+
+/* Awards */
+.awards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.award-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.award-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-bright);
+}
+
+.award-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.award-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+}
+
+.award-org {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.award-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .awards-row { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}

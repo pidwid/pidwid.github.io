@@ -1,0 +1,126 @@
+/* ── Reset & base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:            #07080f;
+  --bg-card:       #0d0f1c;
+  --bg-card-hover: #12152a;
+  --border:        rgba(255,255,255,0.07);
+  --border-bright: rgba(255,255,255,0.14);
+
+  --text:          #e8eaf2;
+  --text-muted:    #7a7f9a;
+  --text-dim:      #4a4f6a;
+
+  /* Gradient: purple → cyan */
+  --grad-a:  #7c5cfc;
+  --grad-b:  #00d4ff;
+  --gradient: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+
+  --accent:        #7c5cfc;
+  --accent-glow:   rgba(124,92,252,0.25);
+  --cyan:          #00d4ff;
+  --cyan-glow:     rgba(0,212,255,0.18);
+
+  --done:   #34d399;
+  --radius: 12px;
+  --font:   'Inter', system-ui, sans-serif;
+  --mono:   'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 3px; }
+
+/* ── Utility ──────────────────────────────────────────────────────────────── */
+.section {
+  padding: 6rem 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  width: 48px;
+  height: 3px;
+  background: var(--gradient);
+  border-radius: 2px;
+  margin-bottom: 3rem;
+}
+
+/* ── Gradient text ────────────────────────────────────────────────────────── */
+.grad-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Noise overlay on bg ─────────────────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Subtle grid lines ───────────────────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(124,92,252,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(124,92,252,0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ── Glow blob behind hero ───────────────────────────────────────────────── */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
